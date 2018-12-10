@@ -22,7 +22,7 @@ class Project extends Component {
             <form onSubmit={this.handleSubmit}>
                 <div className="project">
                     <ProjectHeader></ProjectHeader>
-                    <ProjectInfo></ProjectInfo>
+                    <ProjectInfo infoProps= {}></ProjectInfo>
                 </div>
                 <input type="submit" disabled = {!this.state.isSubmitEnabled} value="Submit"/>
             </form>
