@@ -1,0 +1,21 @@
+.project-info {
+    width: 40%;
+    border: 1px solid black;
+    padding: 30px 30px;
+}
+
+.study-type{
+    margin-top: 10px;
+}
+
+.option-type{
+    width: 99%;
+    height: 24px;
+    margin-top: 10px;
+
+}
+
+.title-input{
+    width: 99%;
+    height: 24px;
+}
