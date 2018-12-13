@@ -4,11 +4,12 @@ import ProjectHeader from './project-header/ProjectHeader';
 import ProjectInfo from './project-info/ProjectInfo';
 class Project extends Component {
     isProjectInfoEnabled = false;
-    isProjectSharingEnabled = false
+    isProjectSharingEnabled = false;
+    // isSubmitEnabled: this.isProjectInfoEnabled && this.isProjectSharingEnabled
     constructor(){
         super();
         this.state = {
-            isSubmitEnabled: this.isProjectInfoEnabled && this.isProjectSharingEnabled
+           
         }
     }
     setProjectInfoStatus = (isEnabled )=>{
@@ -22,7 +23,7 @@ class Project extends Component {
             <form onSubmit={this.handleSubmit}>
                 <div className="project">
                     <ProjectHeader></ProjectHeader>
-                    <ProjectInfo infoProps= {}></ProjectInfo>
+                    <ProjectInfo pStudyTypeProp= {this.props.infoProps}></ProjectInfo>
                 </div>
                 <input type="submit" disabled = {!this.state.isSubmitEnabled} value="Submit"/>
             </form>

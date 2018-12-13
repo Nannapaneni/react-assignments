@@ -10,11 +10,9 @@ class ProjectInfo extends Component {
                     <input className="title-input" type="text" name="title" placeholder="Enter Projcet Title" />
                 </div>
                 <div className="study-type">
+                <span> Select Study Type </span>
                     <select className="option-type">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="mercedes">Mercedes</option>
-                        <option value="audi">Audi</option>
+                    {this.props.pStudyTypeProp.map(studyType=><option value={studyType}>{studyType.toUpperCase()}</option>)}
                     </select>
                 </div>
             </div>
