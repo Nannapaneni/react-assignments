@@ -19,3 +19,26 @@
     width: 99%;
     height: 24px;
 }
+
+
+.enable{
+    color: #00ff !important;
+    cursor: pointer;
+}
+.enable:hover{
+    background-color: aquamarine;
+}
+ .disable{
+    cursor: not-allowed;
+    color: #fff !important;
+}
+.submit-btn{
+    border: none !important;
+    font-weight: normal;
+    padding: 0.6rem 2rem;
+    letter-spacing: 0.3px;
+    border-radius: 20px;
+    min-width: 150px;
+
+    margin: 0.6rem;
+}

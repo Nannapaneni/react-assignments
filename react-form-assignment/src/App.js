@@ -5,7 +5,7 @@ import Project from './components/project/Project';
 class App extends Component {
   state = {
 
-    "studyType": ["US", "X-RAY", "CT", "MRI"]
+    "studyType": ["None","US", "X-RAY", "CT", "MRI"]
   }
   componentWillMount() {
 
