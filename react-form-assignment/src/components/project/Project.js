@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Project.css';
 import ProjectHeader from './project-header/ProjectHeader';
 import ProjectInfo from './project-info/ProjectInfo';
+import ProjectSharing from './project-sharing/ProjectSharing';
 import classNames from 'classnames';
 class Project extends Component {
     isProjectInfoEnabled = false;
@@ -29,6 +30,7 @@ class Project extends Component {
                 <div className="project">
                     <ProjectHeader></ProjectHeader>
                     <ProjectInfo pStudyTypeProp= {this.props.infoProps} pInfoStatusProp={this.setProjectInfoStatus}></ProjectInfo>
+                    <ProjectSharing userListProp = {this.props.projectSharingProps}/>
                 </div>
                 <input type="submit" className={submitButtonStyles} disabled={!this.state.isSubmitEnabled} value="Submit"/>
             </form>

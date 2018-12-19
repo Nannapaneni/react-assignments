@@ -5,7 +5,8 @@ import Project from './components/project/Project';
 class App extends Component {
   state = {
 
-    "studyType": ["None","US", "X-RAY", "CT", "MRI"]
+    "studyType": ["None","US", "X-RAY", "CT", "MRI"],
+    "userList":["soumya","narendra", "vinay", "john", "tom", "vijay", "tommy","sam","nick","neon"]
   }
   componentWillMount() {
 
@@ -14,7 +15,7 @@ class App extends Component {
     console.log(Project);
     return (
       <div className="App">
-        <Project infoProps={this.state["studyType"]}></Project>
+        <Project projectSharingProps = {this.state.userList} infoProps={this.state["studyType"]}></Project>
       </div>
     );
   }
