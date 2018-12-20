@@ -45,9 +45,8 @@ class ProjectSharing extends Component {
     }
     selectUser(event) {
         const selUser = event.target.innerHTML;
-        //this.selUsersList.push(selUser);
-        //this.setState({ selectedUsers: this.selUsersList });
-        this.setState({ selectedUsers: this.state.selectedUsers.push(selUser) });
+        this.state.selectedUsers.push(selUser)
+        this.setState({ selectedUsers: this.state.selectedUsers  });
     }
 
     render() {
@@ -78,11 +77,11 @@ class ProjectSharing extends Component {
                 <div className="selected-user-list">
                     <ul>
                         {this.state.selectedUsers.map((user, index) =>
-                        <div>
-                            <li key={index}>{user}</li>
-                            <button>Remove</button>
-                        </div>    
-                            )}
+                            <div>
+                                <li key={index}>{user}</li>
+                                <button>Remove</button>
+                            </div>
+                        )}
                     </ul>
                 </div>
             </div>
