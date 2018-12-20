@@ -51,6 +51,7 @@ class ProjectSharing extends Component {
 
     render() {
         const userListContainer = classNames(
+            'user-list',
             {
                 'show': this.state.showUserList,
                 'hide': !this.state.showUserList
