@@ -14,6 +14,7 @@ class ProjectSharing extends Component {
         this.handleUserInputChange = this.handleUserInputChange.bind(this);
         this.toggleUserList = this.toggleUserList.bind(this);
         this.selectUser = this.selectUser.bind(this);
+        this.removeSelUser = this.removeSelUser.bind(this);
     }
     componentWillMount() {
         //this.state.set
@@ -46,9 +47,15 @@ class ProjectSharing extends Component {
     selectUser(event) {
         const selUser = event.target.innerHTML;
         this.state.selectedUsers.push(selUser)
-        this.setState({ selectedUsers: this.state.selectedUsers  });
+        this.setState({ selectedUsers: this.state.selectedUsers });
     }
 
+    removeSelUser(event) {
+        const selUser = event.target.id,
+            pos = this.state.selectedUsers.indexOf(selUser);
+        if (pos !== -1) this.state.selectedUsers.splice(pos, 1);
+        this.setState({ selectedUsers: this.state.selectedUsers });
+    }
     render() {
         const userListContainer = classNames(
             'user-list',
@@ -80,7 +87,7 @@ class ProjectSharing extends Component {
                         {this.state.selectedUsers.map((user, index) =>
                             <div>
                                 <li key={index}>{user}</li>
-                                <button>Remove</button>
+                                <icon id={user} className="fa fa-trash remove-icon" onClick={this.removeSelUser}></icon>
                             </div>
                         )}
                     </ul>

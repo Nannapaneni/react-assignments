@@ -34,3 +34,25 @@
     background-color:   #D9E1EC;
    
 }
+
+.selected-user-list ul{
+    list-style: none;
+}
+
+.selected-user-list{
+    position: relative;
+    left: 46px;
+    width: 200px;
+}
+
+.selected-user-list ul li{
+    display: inline-block;
+    margin: 5px;
+    background-color: #D9E1EC;
+
+}
+
+.remove-icon:hover{
+    background-color: coral;
+
+}
